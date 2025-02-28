@@ -233,3 +233,53 @@ nav a {
     padding: 10px;
     margin: 5px 0;
 }
+/* Testimonials Section */
+.testimonials {
+    background: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: inline-block;
+    max-width: 300px;
+    vertical-align: top;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-card .author {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
