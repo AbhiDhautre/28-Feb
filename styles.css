@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 2em;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    background-image: url('https://source.unsplash.com/1600x900/?travel,nature'); /* Online header background image */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Lighter overlay for better visibility */
+    z-index: 1;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    padding: 12px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 5px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: #4CAF50;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.container {
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 3px solid #4CAF50;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    color: #4CAF50;
+    font-size: 1.8em;
+}
+
+/* Booking Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+input, button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Hotels Section */
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hotel-card {
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    background-image: url('https://www.gettyimages.com/photos/hotel-interior-design'); /* Online hotel image */
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hotel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.8);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.form-container input, .form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
